@@ -33,5 +33,7 @@ def detect_and_move_non_blurry_images(folder_path, threshold=100):
             shutil.move(file_path, os.path.join(non_blurry_folder, filename))
 
 # Usage
-folder_path = "C:\\Users\\achar\\OneDrive\\Documents\\GitHub\\EnhancingARKitObjectDetection\\ProcessImages\\images"
+folder_path = input("Enter the path to the folder of images: ")
+if folder_path == "":
+    folder_path="C:\\Users\\achar\\OneDrive\\Documents\\GitHub\\EnhancingARKitObjectDetection\\ProcessImages\\images"
 detect_and_move_non_blurry_images(folder_path)
