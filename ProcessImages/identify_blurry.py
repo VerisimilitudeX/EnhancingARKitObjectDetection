@@ -17,7 +17,7 @@ def detect_and_move_non_blurry_images(folder_path, threshold=100):
         os.makedirs(non_blurry_folder)
 
     for filename in os.listdir(folder_path):
-        file_path = os.path.join(folder_path, filename)
+        file_path = os.path.join(folder_path, filename) # Get the file path
 
         # Skip directories
         if os.path.isdir(file_path):
