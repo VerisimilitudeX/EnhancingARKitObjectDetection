@@ -1,7 +1,6 @@
 import os
 import shutil
 import cv2
-import math
 
 def is_blurry(image_path, threshold=100):
     image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
@@ -11,7 +10,7 @@ def is_blurry(image_path, threshold=100):
     variance = laplacian.var()
     return variance < threshold
 
-def detect_and_move_non_blurry_images(folder_path, threshold=100):
+def detect_and_move_non_blurry_images(folder_path, threshold=7):
     # Create a new folder for non-blurry images
     non_blurry_folder = os.path.join(folder_path, "non_blurry")
     if not os.path.exists(non_blurry_folder):
